@@ -53,13 +53,10 @@
         <artifactId>heroku-maven-plugin</artifactId>
         <version>2.0.13</version>
          <configuration>
-        <archive>
-          <manifest>
-            <addClasspath>true</addClasspath>
-            <classpathPrefix>lib/</classpathPrefix>
-            <mainClass>br.com.bonuslike.Main</mainClass>
-          </manifest>
-        </archive>
+         <appName>bonuslikeapi</appName>
+          <processTypes>
+     		<web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
+  		  </processTypes>
       </configuration>
       </plugin>
     </plugins>
