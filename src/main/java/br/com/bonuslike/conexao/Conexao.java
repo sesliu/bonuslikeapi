@@ -6,17 +6,22 @@ import java.sql.SQLException;
 
 import javax.naming.NamingException;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import br.com.bonuslike.util.DataBaseConfig;
+
 public class Conexao {
 	
+
 private static Connection conexao = null;
 
 	
 	public static Connection getConnection()
 			throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException, NamingException {
-
+				
 	    String url = "jdbc:mysql://localhost:3306/bonus_like";
-		String user = "root";
-		String password = "root";
+		String user =  "root"; // data.getDataSource("spring.datasource.username"); //"root";
+		String password =  "root"; //data.getDataSource("spring.datasource.password"); //"root";
 
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		conexao  = DriverManager.getConnection(url, user, password);
