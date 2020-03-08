@@ -6,9 +6,7 @@ import java.sql.SQLException;
 
 import javax.naming.NamingException;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
-import br.com.bonuslike.util.DataBaseConfig;
 
 public class Conexao {
 	

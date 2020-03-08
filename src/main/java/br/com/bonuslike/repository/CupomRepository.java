@@ -57,6 +57,7 @@ public class CupomRepository implements ICupomRepository{
 				campanha.setDesconto(rs.getInt("desconto"));
 				campanha.setFlativo(rs.getString("flativo"));
 				campanha.setIdcampanha(rs.getLong("idcampanha"));
+				campanha.setDtvalidade(rs.getString("dthora"));
 				
 				cliente_cupom.setCampanha(campanha);
 				
